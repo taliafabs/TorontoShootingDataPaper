@@ -11,7 +11,8 @@
 #### Workspace setup ####
 library(opendatatoronto)
 library(tidyverse)
-# [...UPDATE THIS...]
+library(dplyr)
+library(janitor)
 
 #### Download data ####
 # [...ADD CODE HERE TO DOWNLOAD...]
