@@ -1,10 +1,10 @@
 #### Preamble ####
 # Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 6 April 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Author: Talia Fabregas
+# Date: January 16 2024
+# Contact: talia.fabregas@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
+# Pre-requisites: Run 01-download_data first
 # Any other information needed? [...UPDATE THIS...]
 
 #### Workspace setup ####
