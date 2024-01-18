@@ -1,4 +1,4 @@
-# Starter folder
+# Toronto Shooting Data Paper
 
 ## Overview
 
