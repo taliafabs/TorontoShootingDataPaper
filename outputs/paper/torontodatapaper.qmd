@@ -26,6 +26,8 @@ TTC Streetcar Delay Data from Open Data Toronto.
 
 4.  References
 
+5.  References
+
 ## Introduction
 
 ## Data
@@ -44,18 +46,26 @@ library(ggplot2)
 ## 
 
 ```{r}
-#| label: fig-shootings
-#| fig-cap: Total Annual Shooting Occurrences in Toronto, 2014-2019
+#| label: fig-delaysperline
+#| fig-cap: Total Delays Per TTC Streetcar Line, 2023
 #| echo: false
 #| warning: false
 #| message: false
 streetcar_data <- read_csv(here::here("outputs/data/streetcar_data.csv"))
-streetcar_data
+
+delays_per_line <- streetcar_data %>%
+  group_by(streetcar_line) %>%
+  summarize(delay_count = n())
 
 
 ```
 
 ```{r}
+#| label: fig-rushhourdelays
+#| fig-cap: Total Delays Per TTC Streetcar Line at Rush Hour, 2023
+#| echo: false
+#| warning: false
+#| message: false
 
 ```
 
