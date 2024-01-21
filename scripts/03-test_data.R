@@ -1,15 +1,14 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Tests
+# Author: Talia Fabregas
+# Date: 18 January 2024
+# Contact: talia.fabregas@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
-
+# Pre-requisites: Run 01-download_data and 02-data_cleaning first
 
 #### Workspace setup ####
 library(tidyverse)
-# [...UPDATE THIS...]
+library(dplyr)
+library(janitor)
 
 #### Test data ####
