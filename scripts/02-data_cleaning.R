@@ -21,17 +21,15 @@ raw_data <- read_csv("inputs/data/raw_data.csv")
 streetcardelaydata <- 
   raw_data |>
   janitor::clean_names() |>
-  select(date, line, time, day, location, 
-         incident, min_delay, min_gap, bound) |>
   mutate(line = as.character(line)) |>
   mutate(am_rush = if_else(day %in% c("Monday", "Tuesday", "Wednesday",
                                       "Thursday", "Friday") &
-                             ((hour(time) >= 7) & (hour(time) <= 9)), 1, 0
+                             ((hour(time) >= 6) & (hour(time) <= 9)), 1, 0
     
   )) |>
   mutate(pm_rush = if_else(day %in% c("Monday", "Tuesday", "Wednesday",
                                       "Thursday", "Friday") &
-                             ((hour(time) >= 4) & (hour(time) <= 6)), 1, 0
+                             ((hour(time) >= 16) & (hour(time) <= 19)), 1, 0
   )) |>
   rename(streetcar_line = line) |>
   tidyr::drop_na()
