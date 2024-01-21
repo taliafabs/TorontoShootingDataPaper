@@ -1,11 +1,10 @@
 #### Preamble ####
-# Purpose: Read in data from the Shooting Occurrences Toronto Data 2014-2019 and 
-# make a graph of the number of shootings per year in each area of Toronto (geodivision)
+# Purpose: Simulate TTC streetcar delay data for 2023.
 # Author: Talia Fabregas
 # Date: January 16 2024 
 # Contact: talia.fabregas@mail.utoronto.ca 
 # License: MIT
-# Pre-requisites: Know where to get Toronto shooting occurrences data from.
+# Pre-requisites: Know where to obtain 2023 TTC Streetcar Delay Data from.
 
 
 #### Workspace setup ####
@@ -20,8 +19,11 @@ simulated_data <-
     # Use 1 through 1000 to do 1000 simulations.
     "SimulateDelays" <- 1:1000,
     # Randomly pick a year, with replacement, 1000 times.
-    "StreetcarLine" = sample(
-      x=c("37", "501", "502", "503", "505"),
+    "Line" = sample(
+      x=c("509", "505", "504", "510", "506", "501", "512", "310", "37",
+          "503", "511", "301", "600", "306", "304", "5204", "899",
+          "5101", "540", "500", "555", "999", "502", "705", "202", "507", 
+          "513", "508", "312", "525"),
       size=1000,
       replace=TRUE
     ),
