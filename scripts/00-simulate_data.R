@@ -19,12 +19,13 @@ simulated_data <-
   tibble(
     # Use 1 through 100 to do 100 simulations.
     "Simulation" <- 1:100,
-    # Randomly pick a division and a year, with replacement, 100 times.
+    # Randomly pick a year, with replacement, 100 times.
     "Year" = sample(
       x=c(2014, 2015, 2016, 2017, 2018, 2019),
       size=100,
       replace=TRUE
     ),
+    # Randomly pick a geodivision, with replacement, 100 times.
     "GeoDivision" = sample(
       x=c("D11", "D12", "D13", "D14", "D22", "D23", "D31", "D32", "D33", "D41",
           "D41", "D42", "D43", "D51", "D52", "D53", "D54/55"),
