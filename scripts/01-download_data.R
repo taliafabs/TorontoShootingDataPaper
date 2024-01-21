@@ -1,10 +1,11 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from Open Data Toronto
+# Purpose: Downloads and saves the TTC Streetcar Delay data 2023
+# from Open Data Toronto
 # Author: Talia Fabregas
 # Date: January 16 2024
 # Contact: talia.fabregas@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: Know where to obtain Toronto Shooting Occurrences Data from
+# Pre-requisites: Know where to obtain TTC streetcar delay data from
 # 2014-2019
 
 
@@ -15,18 +16,19 @@ library(dplyr)
 library(janitor)
 
 #### Download data ####
-# get the data package from opendatatoronto
-shootingoccurrencespackage <- 
-  show_package("f29feb49-ceb1-44bf-a2b6-5fc6a0e6147a")
-# look at the package resources to find the right sheet
-resources <- list_package_resources(shootingoccurrencespackage)
-# get the right data sheet
-shootingoccurrencesdata <- 
-  get_resource(list_package_resources(shootingoccurrencespackage)[2,2])
 
+# get the streetcar package from opendatatoronto
+streetcarpackage <- show_package("b68cb71b-44a7-4394-97e2-5d2f41462a5d")
 
+# list the package resources
+list_package_resources(streetcarpackage)
 
-#### Save data ####
-write_csv(shootingoccurrencesdata, "inputs/data/raw_data.csv") 
+# choose the spreadsheet showing streetcar delays data from 2023
+streetcardelays23 <- get_resource(list_package_resources(streetcarpackage)[12,2])
+
+### Save data ###
+write_csv(streetcardelays23, "inputs/data/raw_data.csv")
+d
+
 
          
