@@ -28,7 +28,7 @@ streetcardelays23 <- get_resource(list_package_resources(streetcarpackage)[12,2]
 
 ### Save data ###
 write_csv(streetcardelays23, "inputs/data/raw_data.csv")
-d
+
 
 
          
