@@ -17,19 +17,18 @@ library(janitor)
 #### Simulate data ####
 simulated_data <- 
   tibble(
-    # Use 1 through 100 to do 100 simulations.
-    "Simulation" <- 1:100,
-    # Randomly pick a year, with replacement, 100 times.
-    "Year" = sample(
-      x=c(2014, 2015, 2016, 2017, 2018, 2019),
-      size=100,
+    # Use 1 through 1000 to do 1000 simulations.
+    "SimulateDelays" <- 1:1000,
+    # Randomly pick a year, with replacement, 1000 times.
+    "StreetcarLine" = sample(
+      x=c("37", "501", "502", "503", "505"),
+      size=1000,
       replace=TRUE
     ),
-    # Randomly pick a geodivision, with replacement, 100 times.
-    "GeoDivision" = sample(
-      x=c("D11", "D12", "D13", "D14", "D22", "D23", "D31", "D32", "D33", "D41",
-          "D41", "D42", "D43", "D51", "D52", "D53", "D54/55"),
-      size=100,
+    # Randomly pick a date from 2023, with replacement, 1000 times
+    "Date" = sample(
+      x=c(seq(as.Date("2023-01-01"),as.Date("2023-12-31"),by="1 day")),
+      size=1000,
       replace=TRUE
     )
   )

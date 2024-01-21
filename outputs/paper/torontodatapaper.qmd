@@ -38,6 +38,7 @@ library(tidyverse)
 library(opendatatoronto)
 library(janitor)
 library(dplyr)
+library(ggplot2)
 ```
 
 ## 
@@ -48,7 +49,7 @@ library(dplyr)
 #| echo: false
 #| warning: false
 #| message: false
-shooting_data <- read_csv("outputs/data/cleaned_shooting_analysis_data.csv")
+
 ```
 
 ```{r}

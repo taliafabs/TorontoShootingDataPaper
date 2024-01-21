@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
+# Purpose: Cleans the raw streetcar delays data obtained from Open Data Toronto.
 # Author: Talia Fabregas
 # Date: January 16 2024
 # Contact: talia.fabregas@mail.utoronto.ca
@@ -9,17 +9,22 @@
 
 #### Workspace setup ####
 library(tidyverse)
+library(janitor)
+library(dplyr)
 
-#### Clean data ####
+### Clean data ###
 raw_data <- read_csv("inputs/data/raw_data.csv")
-  
 
-cleaned_data <- 
-  raw_data |>
-  janitor::clean_names() |>
-  select(index, occurred_year, geo_division, count) |>
-  filter(count >= 1) |>
-  tidyr::drop_na()
-
-#### Save data ####
-write_csv(cleaned_data, "outputs/data/cleaned_data.csv")
+# #### Clean data ####
+# raw_data <- read_csv("inputs/data/raw_data.csv")
+#   
+# 
+# cleaned_data <- 
+#   raw_data |>
+#   janitor::clean_names() |>
+#   select(index, occurred_year, geo_division, count) |>
+#   filter(count >= 1) |>
+#   tidyr::drop_na()
+# 
+# #### Save data ####
+# write_csv(cleaned_data, "outputs/data/cleaned_data.csv")
