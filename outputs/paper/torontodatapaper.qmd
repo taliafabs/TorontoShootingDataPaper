@@ -10,7 +10,7 @@ editor: visual
 
 Shooting occurrences across the City of Toronto increased in the five-year period from 2014 to 2019, inclusive.
 
-## Contents 
+## Contents
 
 1.  Introduction
 
@@ -26,9 +26,9 @@ Shooting occurrences across the City of Toronto increased in the five-year perio
 
 4.  References
 
-## Introduction 
+## Introduction
 
-## Data 
+## Data
 
 ```{r}
 #| include: false
@@ -49,6 +49,8 @@ library(ggplot2)
 #| echo: false
 #| warning: false
 #| message: false
+dat <- read_csv(here::here("inputs/data/raw_data.csv"))
+unique(dat$Line)
 
 ```
 
@@ -58,4 +60,4 @@ library(ggplot2)
 
 ## Conclusions
 
-## References 
+## References
