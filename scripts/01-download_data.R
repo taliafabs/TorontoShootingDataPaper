@@ -15,10 +15,12 @@ library(dplyr)
 library(janitor)
 
 #### Download data ####
-# shooting_data <- read.csv("inputs/data/shooting_occurrences_data.csv")
+# get the data package from opendatatoronto
 shootingoccurrencespackage <- 
   show_package("f29feb49-ceb1-44bf-a2b6-5fc6a0e6147a")
+# look at the package resources to find the right sheet
 resources <- list_package_resources(shootingoccurrencespackage)
+# get the right data sheet
 shootingoccurrencesdata <- 
   get_resource(list_package_resources(shootingoccurrencespackage)[2,2])
 
