@@ -24,8 +24,10 @@ simulated_data <-
       size=100,
       replace=TRUE
     ),
+    # Randomly pick a GeoDivision with replacement
     "GeoDivision" = sample(
-      x=c(),
+      x=c("D11", "D12", "D13", "D14", "D22", "D23", "D31", "D32", "D33",
+          "D41", "D42", "D43", "D51", "D52", "D53", "D54/D55"),
       size=100,
       replace=TRUE
     )
