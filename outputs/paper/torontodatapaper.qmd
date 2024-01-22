@@ -4,11 +4,15 @@ author: "Talia Fabregas"
 date: "January 21, 2024"
 format: pdf
 editor: visual
+---ibrary
 ---
 
 ## Abstract
 
-Gun violence killed more young Canadian men, ages 18-24, than cancer in 2019.
+While Toronto is considered safer than many North American major cities of similar size, gun violence has been on the rise. Gun violence killed more young Canadian men, ages 18-24, than cancer in 2019.
+
+```         
+```
 
 ## Contents
 
@@ -18,9 +22,9 @@ Gun violence killed more young Canadian men, ages 18-24, than cancer in 2019.
 
     1.  Data Collection
 
-    2.  Data Processing
+    2.  Ethical Considerations
 
-    3.  Ethical Considerations
+    3.  Examining the Data
 
 3.  Conclusions
 
@@ -28,7 +32,7 @@ Gun violence killed more young Canadian men, ages 18-24, than cancer in 2019.
 
 5.  References
 
-## Introduction
+## 1 Introduction
 
 ## Data
 
@@ -43,7 +47,9 @@ library(dplyr)
 library(ggplot2)
 ```
 
-## 
+#### Data Source and Collection
+
+This report uses the Toronto Shooting Occurrences Data 2014-2019 from the City of Toronto Open Data Portal.
 
 ```{r}
 #| label: fig-shootings per year, by area
@@ -52,7 +58,7 @@ library(ggplot2)
 #| warning: false
 #| message: false
 toronto_shooting_data <- read_csv(here::here("outputs/data/toronto_shooting_data.csv"))
-unique(toronto_shooting_data$geo_division)
+
 
 ```
 
