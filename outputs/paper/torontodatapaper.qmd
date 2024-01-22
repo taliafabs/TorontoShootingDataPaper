@@ -1,5 +1,5 @@
 ---
-title: "500-series Streetcar Lines Experienced Most Delays in 2023"
+title: "Insert title here"
 author: "Talia Fabregas"
 date: "January 21, 2024"
 format: pdf
@@ -8,7 +8,7 @@ editor: visual
 
 ## Abstract
 
-TTC Streetcar Delay Data from Open Data Toronto.
+Gun violence killed more young Canadian men, ages 18-24, than cancer in 2019.
 
 ## Contents
 
@@ -46,16 +46,12 @@ library(ggplot2)
 ## 
 
 ```{r}
-#| label: fig-delaysperline
-#| fig-cap: Total Delays Per TTC Streetcar Line, 2023
+#| label: fig-shootings per year, by area
+#| fig-cap: title
 #| echo: false
 #| warning: false
 #| message: false
-streetcar_data <- read_csv(here::here("outputs/data/streetcar_data.csv"))
-
-delays_per_line <- streetcar_data %>%
-  group_by(streetcar_line) %>%
-  summarize(delay_count = n())
+toronto_shooting_data <- read_csv(here::here("outputs/data/toronto_shooting_data.csv"))
 
 
 ```

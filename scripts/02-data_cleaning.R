@@ -15,26 +15,16 @@ library(dplyr)
 ### Clean data ###
 
 # read in the raw data that was already downloaded
-raw_data <- read_csv("inputs/data/raw_data.csv")
+raw_shooting_data <- read_csv("inputs/data/raw_shooting_data.csv")
 
 # clean the data
-streetcardelaydata <- 
-  raw_data |>
+shootingdata <- 
+  raw_shooting_data |>
   janitor::clean_names() |>
-  mutate(line = as.character(line)) |>
-  mutate(am_rush = if_else(day %in% c("Monday", "Tuesday", "Wednesday",
-                                      "Thursday", "Friday") &
-                             ((hour(time) >= 6) & (hour(time) <= 9)), 1, 0
-    
-  )) |>
-  mutate(pm_rush = if_else(day %in% c("Monday", "Tuesday", "Wednesday",
-                                      "Thursday", "Friday") &
-                             ((hour(time) >= 16) & (hour(time) <= 19)), 1, 0
-  )) |>
-  rename(streetcar_line = line) |>
+  select(index, occurred_year, geo_division, count) |>
   tidyr::drop_na()
 
 
 ### Save data ###
 # save the clean data into the outputs data folder
-write_csv(streetcardelaydata, "outputs/data/streetcar_data.csv")
+write_csv(shootingdata, "outputs/data/toronto_shooting_data.csv")
