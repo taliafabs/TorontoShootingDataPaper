@@ -57,7 +57,8 @@ unique(toronto_shooting_data$geo_division)
 ```
 
 ```{r}
-
+# Shooting occurrences 2014-2019, by policing division
+# Number of shooting occurrenes in toronto, 2014-2019
 
 ```
 
