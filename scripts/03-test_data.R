@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Tests
+# Purpose: Test the data
 # Author: Talia Fabregas
 # Date: 18 January 2024
 # Contact: talia.fabregas@mail.utoronto.ca
