@@ -52,16 +52,12 @@ library(ggplot2)
 #| warning: false
 #| message: false
 toronto_shooting_data <- read_csv(here::here("outputs/data/toronto_shooting_data.csv"))
-
+unique(toronto_shooting_data$geo_division)
 
 ```
 
 ```{r}
-#| label: fig-rushhourdelays
-#| fig-cap: Total Delays Per TTC Streetcar Line at Rush Hour, 2023
-#| echo: false
-#| warning: false
-#| message: false
+
 
 ```
 
