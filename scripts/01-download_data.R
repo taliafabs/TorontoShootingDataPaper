@@ -7,7 +7,7 @@
 # Contact: talia.fabregas@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: Know where to obtain Toronto Shooting Occurrences Data from
-# 2014-2019
+# 2014-2019 
 
 
 #### Workspace setup ####
